@@ -73,25 +73,33 @@ export function Exercise({ fonema, routeOfFonema, routeOfTitleSVG, descriptions 
                 </div>
             </div>
             <div className="flex flex-col justify-around min-h-[60vh]">
-                <section className="flex justify-center items-end sm:items-center gap-3 w-[85%] sm:w-[75%] mx-auto">
-                    {/* Left start */}
-                    <img 
-                    src="/images/svg/global/Estrella.svg"
-                    alt="Imagen de estrella"
-                    className="max-w-12 sm:max-w-24"
-                    />
-                    <div className="mb-4 sm:mb-0">
+                <section className="w-[85%] sm:w-[75%] mx-auto">
+                    <div className="mb-4 w-2/3 mx-auto sm:mb-0 sm:hidden">
                         {/* Text */}
                         {data && 
                         <div dangerouslySetInnerHTML={{__html: descriptions[data.audios[currentAudio].description]}} />
                         }
                     </div>
-                    {/* Right start */}
-                    <img 
-                    src="/images/svg/global/Estrella.svg"
-                    alt="Imagen de estrella"
-                    className="max-w-12 sm:max-w-24 scale-x-[-1]"
-                    />
+                    <div className="flex justify-between sm:justify-center items-end sm:items-center gap-3 -mt-12 sm:-mt-0">
+                        {/* Left start */}
+                        <img 
+                        src="/images/svg/global/Estrella.svg"
+                        alt="Imagen de estrella"
+                        className="max-w-12 sm:max-w-24"
+                        />
+                        <div className="mb-4 sm:mb-0 hidden sm:block">
+                            {/* Text */}
+                            {data && 
+                            <div dangerouslySetInnerHTML={{__html: descriptions[data.audios[currentAudio].description]}} />
+                            }
+                        </div>
+                        {/* Right start */}
+                        <img 
+                        src="/images/svg/global/Estrella.svg"
+                        alt="Imagen de estrella"
+                        className="max-w-12 sm:max-w-24 scale-x-[-1]"
+                        />
+                    </div>
                 </section>
                 <section className="flex flex-col w-[85%] sm:w-[75%] mx-auto">
                     <p className="text-[#6610F2] text-bold text-xl lg:text-3xl text-center mb-8">
